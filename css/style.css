@@ -1,0 +1,99 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+/* reset trinh duyet */
+
+/* cu phap comment trong css */
+/* nhung 1 file css khac vao */
+/* @import 'style-02.css'; */
+/* tim hieu cac selector trong css */
+
+/* id selector */
+/* #title {
+  color: yellow;
+} */
+
+/* class selector */
+.title {
+  color: red;
+}
+
+/* HTML selector */
+/* dung the html lam selector */
+h1.title {
+  color: blue;
+}
+/* input password co vien mau do */
+/* border */
+
+/* attribute selector */
+
+input[type="password"] {
+  border: 1px solid red;
+}
+
+/* lay ra 1 trong nhieu gia tri cua thuoc tinh */
+/* tim kiem ki tu nam trong gia tri cua thuoc tinh  */
+input[class*="us"] {
+  border: 1px solid blue;
+}
+/* the a reactjs co mot mau khac biet voi 2 the kia */
+
+/* tim kiem ki tu ket thuc */
+a[href$='org'] {
+  color: violet;
+}
+/* tim kiem ki tu bat dau */
+a[href^='http'] {
+  color: yellow;
+}
+
+input[class|="my"] {
+  border: 1px solid orange;
+}
+/* the p nam trong div main child 3 mot mau chu khac biet voi cac the p khac */
+
+section.main > div.main-child-3 > p {
+  color: pink;
+}
+
+header.header > div.logo + div.banner > img {
+  width: 100px;
+  height: 100px;
+}
+
+/* h4.title, p.desc {
+  color: red;
+} */
+/* p.desc {
+  color: red;
+} */
+
+section.pesudo-selector > :first-child {
+  color: yellow;
+}
+/*
+section.pesudo-selector :first-of-type {
+  color: red;
+}
+
+section.pesudo-selector :last-child {
+  color: blue;
+}
+section.pesudo-selector :last-of-type {
+  color: blue;
+}
+section.pesudo-selector :nth-child(3) {
+  color: pink;
+}
+section.pesudo-selector :nth-of-type(3) {
+  color: violet;
+}
+section.pesudo-selector :nth-last-child(3) {
+  color: orange;
+}
+section.pesudo-selector :nth-last-of-type(3) {
+  color: brown;
+}
+*/
