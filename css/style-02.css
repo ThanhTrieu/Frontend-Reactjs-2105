@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  /* 1rem = 16px = 100% */
+}
+
+body {
+  padding-top:4rem;
+  font-family: 'Roboto', sans-serif;
+}
+div.parent :only-child {
+  color: red;
+}
+
+input[type='email']:focus {
+  width: 30rem;
+  height: 2.5rem;
+}
+input[type='checkbox']:checked {
+  width: 10rem;
+  height: 10rem;
+}
+
+a.link:active {
+  color: red;
+}
+a.link:visited {
+  color: yellow;
+}
+a.link:link {
+  color: green;
+}
+/* trinh duyet no se luu vao caching */
+a.link:hover {
+  color: violet;
+}
+input[type='email']:hover {
+  width: 30rem;
+}
+
+/* pesudo class element */
+section.content ::first-letter {
+  color: red;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+section.content ::first-line {
+  color: blue;
+}
+/* ::first-letter uu tien cao hon ::first-line */
+
+section.content p::before {
+  content: "Hoc CSS";
+}
+section.content p::after {
+  content: url('../images/favicon.ico');
+}
+
+section.content p::selection {
+  color: yellow;
+}
+
+div.box {
+  width: 10rem;
+  height: 10rem;
+  /* display: inline-block; */
+  float: left;
+  /* margin-left: 5rem;
+  margin-top: 2rem; */
+  /* margin: 2rem 0 0 5rem; */
+}
+div.box-first {
+  border: 1px solid red;
+}
+div.box-second {
+  border: 1px solid blue;
+  /* padding-top: 2rem;
+  padding-left: 2rem; */
+}
+p.box__title {
+  background-color:yellow;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  /* margin-top: 2rem;
+  margin-left: 2rem; */
+}
+div.box-third {
+  border: 1px solid green;
+}
+div.banner {
+  width: 10rem;
+  height: 10rem;
+  background-color: yellow;
+  position: relative;
+}
+.clear {
+  clear: both;
+}
+div.banner > img {
+  /* position: relative;
+  top: 50rem; */
+  position:absolute;
+  top: 0;
+}
+
+nav.nav__menu {
+  width: 100%;
+  height: 4rem;
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  /* z-index: -1; */
+}
+
