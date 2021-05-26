@@ -6,6 +6,11 @@
   border: 0;
   box-sizing: border-box;
 }
+
+/* Khi mà thuộc tính box-sizing nhận giá trị border-box, lúc ấy padding và border sẽ được thêm vào element NHƯNG không làm thay đổi kích thước của phần tử. Lúc ấy phần dành cho content sẽ bị co lại để chừa chỗ cho cái padding và border */
+
+/* Một điều cần nhớ là thuộc tính box-sizing không tác động đến margin, bởi margin không được thêm vào bên trong kích thước của element. */
+
 /* reset trinh duyet */
 
 html {
@@ -27,6 +32,7 @@ body {
 .nav__item {
   padding: 1.5rem 0 1.5rem 1rem;
   border-bottom: thin solid red;
+  position: relative;
 }
 .nav__item:last-child {
   border: none;
@@ -38,6 +44,24 @@ body {
   background-color: black;
   cursor: pointer;
 }
-.nav__item:hover .nav__link {
+
+/* chi hien thi text mau trang cho thang con ben trong */
+.nav__item:hover > .nav__link {
   color: white;
+}
+
+/* css menu dropdown */
+.nav__dropdown {
+  display: none;
+  min-width: 20rem;
+  background-color:  #fffacd;
+  /* di chuyen .nav__dropdown */
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+/* hien thi menu */
+/* chi hien thi menu con khi hover vao cha no */
+.nav__item:hover > .nav__dropdown {
+  display: block;
 }

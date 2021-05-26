@@ -1,0 +1,86 @@
+/* reset css */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* css chung */
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+/* bo dau gach chan cua the a */
+a {
+  text-decoration: none;
+}
+
+/* bien css */
+:root {
+  --bg-color: #323031;
+  --hover-color: #CEC445;
+  --bg-hover-color:#1A1A1A;
+  --text-color: #FFFFFF;
+  --width-container: 98rem;
+}
+.nav {
+  width: 100%;
+  height: 4.5rem;
+  background-color: var(--bg-color);
+  border-top: 0.3rem solid var(--hover-color);
+}
+.container {
+  max-width: var(--width-container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+}
+.nav__link {
+  line-height: 4rem;
+  padding: 0 1.6rem;
+  position: relative;
+}
+.nav__item {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.nav__link:hover {
+  background-color: var(--bg-hover-color);
+}
+.nav__link:hover > .nav__item {
+  color: var(--hover-color);
+}
+
+/* css menu table */
+.nav__table {
+  display: none;
+  min-width: 70rem;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.nav__link:hover > .nav__table {
+  display: block;
+}
+.nav__table > ul {
+  /* hien thi no nhu mot dong */
+  display: table-row;
+}
+.nav__table > ul > .nav__link {
+  /* hien thi no nhu mot cot */
+  display: table-cell;
+}
+.nav__table > ul > .nav__link .nav__item {
+  text-transform: capitalize;
+}
