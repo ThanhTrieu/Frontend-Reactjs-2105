@@ -1,0 +1,120 @@
+/* setting css basic */
+*, *::before, *::after {
+  margin:0;
+  padding:0;
+  /* box-sizing thuoc tinh css3 chung ta hack cho cac trinh duyet khac nhau no hieu */
+  /* webkit: chrome, safari */
+  /* moz: firefox */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing:border-box;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  font-family: 'Lato', sans-serif;
+  /* khoang cach giua cac dong */
+  line-height: 1;
+  /* size font chu mac dinh */
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input, textarea, button {
+  outline: none;
+  box-shadow: none;
+  font-family: 'Lato', sans-serif;
+}
+
+/* xac dinh bien dung chung css */
+:root {
+  --primary-color: #64c29e;
+  --heading-color: #353738;
+  --text-color: #848789;
+  --bg-light: #f7f7f7;
+  --bg-white: #ffffff;
+  --bg-dark: #282f35;
+}
+/* end setting css basic */
+
+/* begin main css */
+/* wrapper */
+.wrapper {
+  max-width: 160rem;
+  margin: 0 auto;
+}
+.header {
+  min-height: 80rem;
+  background-image: url('../img/bg-header.jpg');
+  -webkit-background-size:cover ;
+  -moz-background-size:cover ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.nav {
+  margin-top: 3.5rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  position: relative;
+}
+/* css cho . cua menu */
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+  content: ".";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+}
+.nav__link {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+/* end css header */
+
+/* css feature */
+.feature__header {
+  /* noi dung ben trong cach le */
+  padding: 11.5rem 1.5rem 14rem;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+.feature__img--top {
+  margin: 0 auto 3.3rem;
+}
+.feature__heading {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin-bottom: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.6rem;
+}
+.feature__header--desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 108rem;
+  margin: 0 auto;
+}
